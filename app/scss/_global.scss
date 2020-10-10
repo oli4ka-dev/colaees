@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*,
+main,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+html,
+body {
+    font-family: "HelveticaNeueCyr-Thin";
+    color: $text;
+    height: 100%;
+    // position: relative;
+    overflow-x: hidden;
+}
+
+//прижать footer к низу 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background: linear-gradient(180deg, rgba(242, 242, 242, 1) 4%, rgba(255, 255, 255, 1) 20%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+
+    &::before {
+        content: url(../images/flower.svg);
+        position: absolute;
+        width: 620px;
+        height: 620px;
+        z-index: 15;
+    }
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+//прижать footer к низу 
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
